@@ -9,9 +9,13 @@ function addTask(event) {
     event.preventDefault();
     let inputvalue = inputElement.value;
 
-    if(!inputvalue === ""){
+    if(inputvalue === ""){
 
-    let listItem = document.createElement('li');
+        alert("You must have to enter a task name!")
+
+    }else{
+     
+      let listItem = document.createElement('li');
     let checkbox = document.createElement('input');
     let label = document.createElement('label');
     
@@ -24,9 +28,9 @@ function addTask(event) {
 
     todoUl.appendChild(listItem)
     inputElement.value = "";
-    }else{
-        alert("You must have to enter task name!")
+
     }
+    
 
     saveData()
 } 
