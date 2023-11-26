@@ -7,13 +7,16 @@ const inputElement = document.querySelector('input[type=text]')
 
 function addTask(event) {
     event.preventDefault();
+    let inputvalue = inputElement.value;
+
+    if(inputvalue === ""){
 
     let listItem = document.createElement('li');
     let checkbox = document.createElement('input');
     let label = document.createElement('label');
     
     checkbox.type = "checkbox";
-    label.innerText = inputElement.value;
+    label.innerText = inputvalue
 
     listItem.appendChild(checkbox);
     listItem.appendChild(label)
@@ -21,6 +24,9 @@ function addTask(event) {
 
     todoUl.appendChild(listItem)
     inputElement.value = "";
+    }else{
+        alert("You must have to enter task name!")
+    }
 
     saveData()
 } 
