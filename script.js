@@ -9,7 +9,7 @@ function addTask(event) {
     event.preventDefault();
     let inputvalue = inputElement.value;
 
-    if(inputvalue === ""){
+    if(!inputvalue === ""){
 
     let listItem = document.createElement('li');
     let checkbox = document.createElement('input');
