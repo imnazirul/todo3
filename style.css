@@ -84,7 +84,8 @@
     border:2px solid gray;
     border-radius: 20px;
     margin: 10px;
-    max-height: 500px;
+    max-height: 1000px;
+    overflow: auto;
 }
 
 ul{
